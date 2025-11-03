@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Maven+Pro:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+
+.oswald{
+    font-family: 'Oswald', sans-serif;
+}
+
+.gilda{
+    font-family: 'Gilda Display', sans-serif;
+}
+
+.maven{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.italian{
+    font-family: 'Italiana', sans-serif;
+}
+
+/* For scroll animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

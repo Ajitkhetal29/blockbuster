@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Blockbuster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        gilda: ['"Gilda Display"', 'serif'],
+                        maven: ['"Maven Pro"', 'sans-serif'],
+                        italian: ['Italiana', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50 text-slate-800">
+        <div class="max-w-6xl mx-auto px-5 flex justify-between items-center h-20">
+            <a href="index.html">
+                <img src="assets/gallery/bb-logo (1).png" class="h-12" alt="The Grandeur Logo">
+            </a> <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-4">
+                <a href="index.html"
+                    class="text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">Home</a>
+                <a href="about.html"
+                    class="text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">About</a>
+                <a href="gallery.html" class="text-amber-600 font-semibold px-3 py-2">Gallery</a>
+                <a href="contact.html"
+                    class="text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">Contact</a>
+            </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button
+                class="mobile-nav-toggle md:hidden bg-none border border-slate-800 text-slate-800 px-3 py-2 rounded cursor-pointer">Menu</button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <ul class="flex flex-col items-center space-y-4 py-4">
+                <li><a href="index.html"
+                        class="block text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">About</a>
+                </li>
+                <li><a href="gallery.html"
+                        class="block text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">Gallery</a>
+                </li>
+                <li><a href="contact.html"
+                        class="block text-slate-800 hover:text-amber-600 transition duration-300 px-3 py-2">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-gray-100 py-12 text-center">
+            <div class="max-w-6xl mx-auto px-5">
+                <h1 class="text-4xl md:text-5xl font-gilda text-slate-800 mb-2">Project Gallery</h1>
+                <p class="text-lg text-orange-600 font-maven">Explore the stunning architecture and luxurious interiors
+                    of The Grandeur Residences.</p>
+            </div>
+        </section>
+
+        <!-- Full Gallery Section -->
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-on-scroll">
+                    <img src="assets/gallery/Living room.jpg" alt="Luxurious living room"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/Bedroom op 1.jpg" alt="Modern kitchen design"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/Living room op 2.jpg" alt="Serene bedroom view"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/Bedroom.jpg" alt="Serene bedroom view"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/kitech option 2.jpg" alt="Serene bedroom view"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/istockphoto-1824615178-612x612.jpg" alt="Serene bedroom view"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+                    <img src="assets/gallery/indoor-4148891_1280.jpg" alt="Serene bedroom view"
+                        class="w-full h-64 object-cover rounded-md cursor-pointer gallery-item transition-transform duration-300 hover:scale-105">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white text-center py-8">
+        <div class="max-w-6xl mx-auto px-5">
+            <p class="text-xs text-gray-400 mb-4">
+                Disclaimer: This pre-launch presentation is purely conceptual and for representative purposes only. The information and details herein are provided strictly for illustrative purposes. All renderings, pictures, lists of amenities, location maps, layout plans, floor plans, designs, write-ups, specifications, and other details are only indicative and subject to approval by the respective government authorities. The developer reserves the right to make changes to any of these in the interest of the project’s development. *Terms and conditions apply.
+            </p>
+            <p class="text-sm text-white maven-pro">
+                &copy; blockbuster.com. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+        <button id="lightbox-close"
+            class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300">&times;</button>
+        <div class="relative">
+            <img id="lightbox-image" src="" alt="Enlarged gallery image" class="max-w-[90vw] max-h-[90vh] rounded-md">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
